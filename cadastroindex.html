@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link href="./cadastrostyle.css" rel="stylesheet">
+    
+    <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Cadastro de Usuário</title>
+            <link href="./cadastrostyle.css" rel="stylesheet">
+        </head>
+        <body>
+            <div class="container">
+                <h2>Cadastro de Usuário</h2>
+                <form id="registrationForm" action="/submit-form" method="post">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                    <div id="errorMessages" class="error-messages"></div>
+                </form>
+            </div>
+            
+            <script src="./js/formValidation.js"></script>
+            <script src="./js/dynamicRendering.js"></script>
+            <script src="./js/main.js"></script>
+<!-- <body>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form action="/submit-form" method="post">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html> -->

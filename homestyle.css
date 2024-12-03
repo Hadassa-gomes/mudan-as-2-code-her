@@ -1,0 +1,482 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(242, 242, 242, 1);
+    
+    
+}
+
+.imagem-container{
+    width: 611px;
+    height: 523.64px;
+    overflow: hidden; 
+    
+}
+
+.imagem-container img {
+    margin-top: 10px;
+    width: 90%; /* A imagem vai preencher toda a largura do contêiner */
+    height: 100%; /* A imagem vai preencher toda a altura do contêiner */
+    object-fit: contain; /* Isso garante que a imagem preencha o contêiner sem distorcer */
+    object-position: 80% center; 
+}
+
+
+.section-content {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    right: 0; /* Alinha à direita */
+    transform: translateY(-70%); /* Ajusta para centralização perfeita */
+    padding: 50px;
+    width: 60%;
+    font-size: 2em;
+    
+}
+
+
+
+.flex-container {
+    margin-top: -200px;
+    height: 100vh; /* Define altura total da tela */
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    
+}
+
+.histórias-container {
+    padding: 50px;
+    /* Cor de fundo leve */
+    text-align: center;
+}
+
+.histórias-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Estilo geral da seção de eventos */
+.featured-events {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.featured-events h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Estilo do acordeão */
+.accordion {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o acordeão */
+    border-radius: 8px;
+}
+
+.featured-events h3 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2rem; /* Ajusta o tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+
+/* Estilo de cada item do acordeão */
+.accordion-item {
+    border: 1px solid #ddd; /* Linha fina para separação */
+    margin-bottom: 10px;
+}
+
+/* Estilo do cabeçalho de cada item (botão que será clicado) */
+.accordion-header {
+    width: 100%;
+    background-color: #7E459B;
+    padding: 15px;
+    text-align: center; /* Centraliza o título */
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex; /* Usa o Flexbox */
+    justify-content: space-between; /* Espaça o título e o ícone */
+    align-items: center; /* Alinha verticalmente o título e o ícone */
+}
+
+/* Efeito de hover no cabeçalho */
+.accordion-header:hover {
+    background-color: #fff;
+}
+
+/* Estilo do conteúdo que aparece e desaparece */
+.accordion-content {
+    display: none;
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Quando o item é aberto, mostra o conteúdo */
+.accordion-item:focus-within .accordion-content {
+    display: block;
+}
+
+/* Adiciona o ícone de + ou - ao lado do título */
+.accordion-header::after {
+    content: '\002B'; /* Símbolo de mais (+) */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Quando o item estiver expandido, o ícone muda para - */
+.accordion-item:focus-within .accordion-header::after {
+    content: '\2212'; /* Símbolo de menos (-) */
+    transform: rotate(180deg); /* Roda o ícone */
+}
+
+/* Estilo para a seção "Comunidade" */
+.community-info {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    margin: 0 auto; /* Centraliza a seção */
+    width: 60%; /* Ajusta a largura da seção, pode ser alterado conforme necessário */
+}
+
+/* Estilo para o título "Comunidade" */
+.community-info h3 {
+    font-size: 2rem; /* Ajusta o tamanho do título */
+    color: #333; /* Cor do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para o parágrafo */
+.community-info p {
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    color: #666; /* Cor do texto */
+}
+
+/* Estilo da seção de inscrição */
+.signup-section {
+    background-color: #f9f9f9; /* Cor de fundo clara */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o conteúdo */
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 20px auto; /* Centraliza a seção na página */
+}
+
+/* Título da seção */
+.signup-section h2 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #333; /* Cor escura para o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Lista de links */
+.signup-section ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Itens da lista */
+.signup-section ul li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+/* Links */
+.signup-section ul li a {
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #ff007f; /* Cor rosa para os links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease; /* Efeito de transição suave */
+}
+
+/* Efeito de hover nos links */
+.signup-section ul li a:hover {
+    background-color: #7E459B;
+    /* Cor mais escura ao passar o mouse */
+}
+
+/* Responsividade: ajusta o layout para telas menores */
+@media (max-width: 768px) {
+    .signup-section {
+        padding: 20px; /* Menos espaçamento em telas menores */
+    }
+    
+    .signup-section h2 {
+        font-size: 1.5rem; /* Tamanho de fonte reduzido */
+    }
+    
+    .signup-section ul li {
+        margin-bottom: 8px; /* Menos espaçamento entre os itens */
+    }
+}
+
+
+/* Estilo para o Container de Cards */
+.cards-container {
+    display: flex; /* Usamos o Flexbox para os cards ficarem lado a lado */
+    gap: 20px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha, caso não caibam na tela */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    padding: 20px; /* Padding geral para a área dos cards */
+}
+
+/* Estilo para o Card */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* Largura do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Imagem do Card */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Conteúdo do Card */
+.card-content {
+    padding: 20px;
+}
+
+/* Título do Card */
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Descrição do Card */
+.card-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Botão do Card */
+.card-btn {
+    background-color: #7E459B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no card */
+.card:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+}
+
+/* Efeito de hover no botão */
+.card-btn:hover {
+    background-color: #7E459B;
+    
+}
+
+
+
+.course-box {
+    background-color: #ffffff; /* Fundo do retângulo */
+    width: 1000px; /* Largura do retângulo */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o texto dentro do retângulo */
+}
+
+.course-box h1 {
+    font-size: 24px; /* Tamanho do título */
+    color: #333333; /* Cor do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    text-align: center;
+}
+
+.course-box p {
+    font-size: 16px; /* Tamanho da legenda */
+    color: #666666; /* Cor da legenda */
+    margin-bottom: 20px; /* Espaço abaixo da legenda */
+}
+
+.course-box button {
+    background-color: #7E459B;
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    font-size: 16px; /* Tamanho do texto do botão */
+    cursor: pointer; /* Cursor tipo "mãozinha" ao passar o mouse */
+    transition: background-color 0.3s; /* Efeito de transição suave */
+}
+
+.course-box button:hover {
+    background-color: #7E459B;
+    
+}
+
+header {
+    width: 100%;
+    background-color: #7E459B;
+    padding: 20px 8%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.main-content {
+    padding: 40px 8%;
+}
+
+.section-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.section-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+.featured-events {
+    margin-top: 40px;
+}
+
+.featured-events h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.featured-events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.featured-events ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.community-info {
+    margin-top: 40px;
+}
+
+.community-info h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.community-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+.signup-section {
+    margin-top: 40px;
+}
+
+.signup-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.signup-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.signup-section ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.signup-section ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #7E459B;
+    color: #fff;
+    padding: 20px 8%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content .logo {
+    width: 150px;
+    height: 50px;
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer-content .contact-info {
+    font-size: 14px;
+}
+
+.footer-content .social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-content .social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
